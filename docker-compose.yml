@@ -9,6 +9,8 @@ services:
       - 8080:8080
   react-app:
     build: "./react-app"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
     volumes:
      - ./react-app:/home/node/app
      - /home/node/app/node_modules
