@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  api:
+    build: "./api"
+    volumes:
+      - ./api:/home/node/app
+      - /home/node/app/node_modules
+    ports:
+      - 8080:8080
+  react-app:
+    build: "./react-app"
+    volumes:
+     - ./react-app:/home/node/app
+     - /home/node/app/node_modules
+    ports:
+     - 8081:3000
