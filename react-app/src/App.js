@@ -3,6 +3,8 @@ import Footer from './components/Template/Footer';
 
 import MainPage from './components/Pages/MainPage';
 import LoginPage from './components/Pages/LoginPage';
+import DashboardPage from './components/Pages/DashboardPage';
+import ProfilePage from './components/Pages/ProfilePage';
 
 import {
   BrowserRouter as Router,
@@ -14,50 +16,29 @@ import {
 function App() {
   return (
     <Router>
-    <div className="App">
-      <Navbar />
-
-   <div>
-     <nav>
-       <ul>
-         <li>
-           <Link to="/">Home</Link>
-         </li>
-         <li>
-           <Link to="/about">About</Link>
-         </li>
-         <li>
-           <Link to="/main">Main page</Link>
-         </li>
-       </ul>
-     </nav>
-
-     <Switch>
-       <Route path="/about">
-         <About />
-       </Route>
-       <Route path="/main">
-         <MainPage />
-       </Route>
-       <Route path="/">
-         <Home />
-       </Route>
-     </Switch>
-   </div>
- <Footer />
-    </div>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact>
+            <MainPage />
+          </Route>
+          <Route path="/dashboard" exact>
+            <DashboardPage />
+          </Route>
+          <Route path="/profile" exact>
+            <ProfilePage />
+          </Route>
+          <Route path="/login" exact>
+            <LoginPage />
+          </Route>
+          <Route path="/">
+            404
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
     </Router>
   )
 }
-function Home() {
-  return <h2>Home</h2>;
-}
 
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
 export default App;

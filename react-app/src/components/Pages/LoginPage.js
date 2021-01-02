@@ -4,7 +4,7 @@ class LoginPage extends Component {
   render() {
     return(
   <div>
-      hello world
+      Login page
   </div>
     )
   }
