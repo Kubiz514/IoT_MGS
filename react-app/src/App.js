@@ -18,23 +18,23 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Switch>
-          <Route path="/" exact>
-            <MainPage />
-          </Route>
-          <Route path="/dashboard" exact>
-            <DashboardPage />
-          </Route>
-          <Route path="/profile" exact>
-            <ProfilePage />
-          </Route>
-          <Route path="/login" exact>
-            <LoginPage />
-          </Route>
-          <Route path="/">
-            404
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/" exact>
+              <MainPage />
+            </Route>
+            <Route path="/dashboard" exact>
+              <DashboardPage />
+            </Route>
+            <Route path="/profile" exact>
+              <ProfilePage />
+            </Route>
+            <Route path="/login" exact>
+              <LoginPage />
+            </Route>
+            <Route path="/">
+              404
+            </Route>
+          </Switch>
         <Footer />
       </div>
     </Router>
